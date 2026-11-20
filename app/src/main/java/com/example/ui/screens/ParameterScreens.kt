@@ -307,7 +307,7 @@ private fun VegaRadarContent(state: ServiceToolUiState, viewModel: ServiceToolVi
                                     Icon(
                                         Icons.Filled.ZoomIn,
                                         contentDescription = "Vergrößern",
-                                        tint = colors.signalYellow,
+                                        tint = colors.headerAccent,
                                         modifier = Modifier.size(16.dp)
                                     )
                                     Text(

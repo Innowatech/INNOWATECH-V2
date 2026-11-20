@@ -195,7 +195,7 @@ object PlatformActions {
             <meta charset="utf-8"/>
             <style>
               body { font-family: sans-serif; color: #181c22; margin: 20px; font-size: 12px; }
-              .header { border-bottom: 3px solid #ffd400; padding-bottom: 8px; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: baseline; }
+              .header { border-bottom: 3px solid #0d47a1; padding-bottom: 8px; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: baseline; }
               .brand { font-size: 18px; font-weight: 800; color: #181c22; }
               .sub { font-size: 11px; color: #4b5563; }
               table { width: 100%; border-collapse: collapse; margin-bottom: 12px; }

@@ -2,11 +2,20 @@ package com.example.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-// Signature Industrial Yellow & Anthracite Palette (VEGA Tools inspired for Innotech)
-val SignalYellow = Color(0xFFFFD400)
-val SignalYellowHover = Color(0xFFE6BE00)
-val SignalYellowSoft = Color(0xFFFFF6CC)
-val SignalYellowDarkContainer = Color(0xFF473B00)
+// INNOWATΞCH Company Blue Palette (replacing VEGA Yellow with Company Blue)
+val CompanyBlue = Color(0xFF0D47A1)
+val CompanyBlueHover = Color(0xFF1976D2)
+val CompanyBlueCyan = Color(0xFF29B6F6)
+val CompanyBlueLight = Color(0xFF64B5F6)
+val CompanyBlueSoft = Color(0xFFE3F2FD)
+val CompanyBlueDarkText = Color(0xFF90CAF9)
+val CompanyBlueDarkContainer = Color(0xFF1A2634)
+
+// Keep legacy token names mapped to INNOWATΞCH Company Blue for compatibility
+val SignalYellow = CompanyBlue
+val SignalYellowHover = CompanyBlueHover
+val SignalYellowSoft = CompanyBlueSoft
+val SignalYellowDarkContainer = CompanyBlueDarkContainer
 
 val Anthracite900 = Color(0xFF181C22)
 val Anthracite800 = Color(0xFF222730)
@@ -34,5 +43,5 @@ val NamurOrange = Color(0xFFEA580C)
 val NamurOrangeBg = Color(0xFFFFEDD5)
 val NamurRed = Color(0xFFDC2626)
 val NamurRedBg = Color(0xFFFEE2E2)
-val NamurBlue = Color(0xFF2563EB)
-val NamurBlueBg = Color(0xFFDBEAFE)
+val NamurBlue = Color(0xFF0D47A1)
+val NamurBlueBg = Color(0xFFE3F2FD)

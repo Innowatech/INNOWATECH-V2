@@ -398,8 +398,8 @@ fun InnotechServiceApp(viewModel: ServiceToolViewModel) {
                         Button(
                             onClick = viewModel::turnOffScreenTorch,
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = Color(0xFF181C22),
-                                contentColor = Color(0xFFFFD400)
+                                containerColor = Color(0xFF0D47A1),
+                                contentColor = Color.White
                             ),
                             modifier = Modifier.size(width = 220.dp, height = 56.dp)
                         ) {

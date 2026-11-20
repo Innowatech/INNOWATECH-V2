@@ -260,7 +260,7 @@ private fun AusliternContent(state: ServiceToolUiState, viewModel: ServiceToolVi
             Surface(
                 shape = MaterialTheme.shapes.medium,
                 color = colors.subtleSurface,
-                border = BorderStroke(1.dp, if (state.ausliterRunning) colors.signalYellow else colors.cardBorder),
+                border = BorderStroke(1.dp, if (state.ausliterRunning) MaterialTheme.colorScheme.primary else colors.cardBorder),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(
@@ -270,7 +270,7 @@ private fun AusliternContent(state: ServiceToolUiState, viewModel: ServiceToolVi
                     Text(
                         text = String.format(Locale.US, "%02d s", state.ausliterTimeLeftSec),
                         style = IndustrialTextStyles.ReadoutLarge,
-                        color = if (state.ausliterRunning) colors.signalYellow else MaterialTheme.colorScheme.onSurface
+                        color = if (state.ausliterRunning) MaterialTheme.colorScheme.onPrimaryContainer else MaterialTheme.colorScheme.onSurface
                     )
                     Spacer(modifier = Modifier.height(8.dp))
                     Button(

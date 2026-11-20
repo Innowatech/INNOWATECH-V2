@@ -390,7 +390,7 @@ fun KofferPickerModal(
                         modifier = Modifier.weight(1f)
                     )
                     TextButton(onClick = viewModel::closeKofferPicker) {
-                        Text("Schließen", color = InnotechTheme.colors.signalYellow)
+                        Text("Schließen", color = InnotechTheme.colors.headerAccent)
                     }
                 }
                 ServicekofferBody(

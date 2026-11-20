@@ -90,7 +90,7 @@ import com.example.ui.theme.InnotechTheme
 fun categoryAccentColor(category: ModuleCategory): Color = when (category) {
     ModuleCategory.ANWENDUNG -> Color(0xFF2563EB)
     ModuleCategory.PARAMETER -> Color(0xFF16A34A)
-    ModuleCategory.HILFSMITTEL -> Color(0xFFD97706)
+    ModuleCategory.HILFSMITTEL -> Color(0xFF0284C7)
     ModuleCategory.KATALOG_CHECKLISTEN -> Color(0xFFDC2626)
 }
 
@@ -160,7 +160,7 @@ fun InnotechTopBar(
                         .padding(start = 6.dp, end = 10.dp)
                         .size(width = 6.dp, height = 30.dp)
                         .clip(RoundedCornerShape(3.dp))
-                        .background(colors.signalYellow)
+                        .background(colors.headerAccent)
                 )
             }
 
@@ -180,7 +180,7 @@ fun InnotechTopBar(
                 Text(
                     text = subtitle,
                     style = MaterialTheme.typography.labelSmall,
-                    color = colors.signalYellow,
+                    color = colors.headerAccent,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )
@@ -230,7 +230,7 @@ fun InnotechTopBar(
                     Icon(
                         imageVector = if (isPinned) Icons.Filled.PushPin else Icons.Outlined.PushPin,
                         contentDescription = stringResource(R.string.cd_pin_tab),
-                        tint = if (isPinned) colors.signalYellow else colors.headerContent
+                        tint = if (isPinned) colors.headerAccent else colors.headerContent
                     )
                 }
             }
@@ -265,7 +265,7 @@ fun InnotechTopBar(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(3.dp)
-                .background(colors.signalYellow)
+                .background(colors.headerAccent)
         )
     }
 }
@@ -710,7 +710,7 @@ fun IndustrialResultBox(
             Text(
                 text = value,
                 style = IndustrialTextStyles.ReadoutMedium,
-                color = if (highlight) colors.onSignalYellow else MaterialTheme.colorScheme.onSurface
+                color = if (highlight) MaterialTheme.colorScheme.onPrimaryContainer else MaterialTheme.colorScheme.onSurface
             )
         }
     }

@@ -1,0 +1,100 @@
+INNOWATΞCH Service Tool – Kumulatives Changelog (#MAT)
+=====================================================
+
+Neu in v5.6 (Top-Reset, Enthärter-Zeitaufwand & automatisches Outlook-/Handy-Mailtrennzeichen)
+---------------------------------------------------------------------------------------------
+- Kompakter Reset- / „➕ Neu“-Button direkt oben in der Zurück-Leiste neben „⬅️ Zurück zur Übersicht“ (unten bleibt als Reserve erhalten)
+- Checkliste Enthärtertausch: Sammel-Typentabelle aus dem Zeitaufwand-Feld entfernt – nach Typauswahl erscheint nur noch der exakte kalkulatorische Zeitaufwand direkt im Datenblatt
+- E-Mail-Verteiler (Checkliste & Kunden-/Eigennotizen): Automatische Trennzeichen-Wahl (Handy iOS/Android: Komma „,“ | Windows-PC Outlook: Semikolon „;“) inkl. einmaliger Reserve-Einstellung im Zahnrad-Menü („Komfort & Timer“)
+
+Neu in v5.5 (Dashboard als Hauptstartseite, 3er-Kompaktraster & Ansicht im Zahnradmenü)
+----------------------------------------------------------------------------------------
+- Feste Hauptstartseite Dashboard: App startet konsequent in der übersichtlichen Dashboard-Ansicht; der alte „Ansicht“-Schalter oben links im Header wurde entfernt
+- Ansichtsumstellung im Zahnrad-Menü („Erscheinungsbild & Icons“): Startansicht/Navigation (Dashboard Standard / Schiebeleiste) ab sofort sauber im Einstellungsmenü auswählbar
+- Dashboard-Kacheldichte wählbar: Neues 3er-Kompaktraster („Kompakt (3er-Raster)“) als neuer Standard für mehr Überblick auf einen Blick – alternativ jederzeit umschaltbar auf „Groß (2er-Raster)“ im Zahnrad-Menü
+
+Neu in v5.4 (Checkliste-Verteiler & S/W-Druck, Kunden-/Eigennotizen, Dosierauswertung & Datenbankpflege)
+----------------------------------------------------------------------------------------------------------
+- Checkliste Enthärtertausch (Kategorie „Katalog & Checklisten“):
+  * Drucksichere Auswahlmarkierung in INNOWATΞCH-Blau: Ausgewählte Optionen & Turbinenkarten mit 4,5px/5px starkem Rahmen und ✓-Haken (kein verdeckender Vollfarb-Hintergrund) + deutlichere Druckschrift
+  * Freie „Sonstiges“-Handeingabe für Schlauchgrößen (Hauptventil, Abfluss) sowie Panzerschlauch (Größe, Länge, Anschlussart)
+  * Durchflussmesser / Turbine um 4. Auswahl „Ohne / Keine verbaut“ erweitert
+  * Eigenständiger Empfänger-Verteiler (Sandra Bantle, Lisa Widmaier, Jutta Wezel, Wolfgang Henes – einzeln abwählbar; komplett getrennt von Hotline & Service-Notizen)
+  * Lokales Speichern & Laden mehrerer Aufnahmen sowie PDF-Dateiname „Aufnahme Enthärtertausch - <Kunde>.pdf“
+- Neues Modul „📒 Kunden- & Eigennotizen“ (Kategorie „Hilfsmittel“, für alle 15 Nutzer direkt freigeschaltet):
+  * Notiz-Typ (Kundennotiz, Eigennotiz, Wartungshinweis, To-Do / Rückruf, Materialbestellung), Kunde/Objekt, Betreff, Anlagen-SN, Zeitstempel & deutsche Diktierfunktion (🎙️)
+  * Lokales Notiz-Archiv mit Suche & Typ-Filter, PDF-Druck sowie E-Mail-Versand (An + optional CC) über gespeicherte Kollegen-Mailadressen aus users.json („An mich“ hervorgehoben)
+- Neues Modul „📊 Dosierauswertung“ (Kategorie „Anwendung“, für ADMIN & MAT aktiv, per Admin-Konsole einzeln freischaltbar):
+  * Auswertung aus Wasserzähler alt/neu, Dosiermenge alt/neu (Pumpen-Mengensummierung), Chlorgehalt Anolytkonzentrat & Chlor-Sollwert (inkl. eigenem Dark-Mode-Kalender)
+  * Klare Ergebnisausgabe: Wasserverbrauch in m³, dosierte Anolytmenge in l, reale Dosierquote auf 2 Nachkommastellen (%), real eindosiertes Aktivchlor (mg/l) & Sollwert-Verhältnis (%)
+  * Optionale Datumsangaben (Datum alt/neu): automatische Tages-Runterrechnung für Wasserverbrauch pro Tag (m³/Tag, 2 Nachkommastellen) sowie Dosiermenge / Anolyt pro Tag (l/Tag)
+- VEGA Radarsensor & Dark-Mode-Feinschliff:
+  * Standard-Tankvolumen zeigt nur noch die Literzahl; separates Ausgabefeld „Tankdurchmesser (Ø)“ in mm direkt unter dem Maximum-Abgleich + blaue Hervorhebung des gewählten Tanks unter „4. Abgleich (0% / 100%)“
+  * Alle Dropdowns & Kalender im gesamten Tool (inkl. Admin-Konsole & Optik-Profil) öffnen im Dark Mode konsequent dunkel
+- Selbstständige Datenbankpflege & Kollegen-Adressbuch:
+  * Auslagerung von Sonden, Enthärtern, Aquadron-Anlagen und Servicekoffern in databases.json (mit <30ms Offline-Sofortstart + 1,2s Timeout-Sync)
+  * Admin-Konsole erweitert: Name & E-Mail je Techniker in users.json pflegbar + neuer Tab „🗂️ Datenbanken“ mit Tabellen-Editor, Excel-CSV-Export/Import inkl. Diff-Vorschau (Neu / Geändert / optional Entfernen) und JSON-Export
+
+Neu in v5.3 (Checkliste Enthärtertausch, 4. Kategorie Rot & Nachorder-Menge)
+---------------------------------------------------------------------------
+- Neue rote Kategorie „Katalog & Checklisten“ (Servicekoffer & Checkliste Enthärtertausch); bisherige Kategorie „Werkzeuge“ zu „Hilfsmittel“ umbenannt
+- Kategorien per Burger-Symbol (☰) in den Einstellungen sortierbar („Reihenfolge der Kategorien“) – gilt synchron für Dashboard und Schiebeleiste
+- Neues Modul „📋 Checkliste Enthärtertausch“ (unter „Katalog & Checklisten“, per users.json / Admin-Konsole einzeln abschaltbar): alle Stammdaten, 14 Enthärtertypen inkl. Art.-Nr. & Zeitaufwand, Kabinett-/Schlauch-/Panzerschlauch-/Schwimmerlanzen-Auswahl, 3 Original-Turbinenfotos (100041, 109012, 103547) mit Zoom-Lightbox sowie direkte Übernahme in Service-Notizen, E-Mail, Kopie & PDF-Druck
+- Servicekoffer-Nachorder & Verbaut ohne überflüssige Klammerzusätze („(Fehlteil)“, Koffer/Fach-Hinweise) + neues Mengen-Fenster (+ / − / Schnellwahl 1–10) vor dem Einfügen in die Service-Notizen
+- Empfangsanzeige umbenannt: „Schwaches Netz“ statt „Schwachnetz“
+- E-Mail-Versand an service-hotline@innowatech.de ohne umständlichen Foto-Anhang-Workaround (öffnet mailto direkt zuverlässig; Fotos können per Büroklammer direkt in der Mail-App angehängt werden)
+
+Neu in v5.2 (Keller-/Schwachnetz-Sofortstart-Fix)
+-------------------------------------------------
+- 100 % synchroner UI-Start (< 30 ms): Dashboard, Tabs, Koffer & Rechner rendern ab sofort vollständig synchron vor jedem Netzwerkzugriff – kein Warten mehr auf async-Calls oder window.load
+- Doppelter Timeout-Schutz (AbortController + harter Promise.race-Timer): Auch wenn ein Mobilfunknetz „hängt“ (1 Balken ohne Datenfluss), bricht der Hintergrund-Sync (users.json) nach exakt 1,2 s hart ab; zusätzlich Fallback auf CacheStorage, falls localStorage leer ist
+- Service Worker sw.js v5.2: Jede Navigation (App-Start) wird direkt aus CacheStorage bedient; optionale Dateien (users.json, icon.png) werden vorab mitgecacht; uncached Assets (z. B. favicon/icon) laufen maximal 1,5 s statt ewig zu hängen; verzögerte SW-Update-Prüfung (2,5 s nach Start) blockiert den Start nicht mehr
+- Leeres <img src=""> im Lightbox-Platzhalter sowie doppelter Favicon-Request (<link rel="icon" href="data:,">) beseitigt
+
+Neu in v5.1 (Offline-Start, Android-Zurück, Diktat & Servicekoffer)
+------------------------------------------------------------------
+- Offline-/Schwachnetz-Start (Prio 1): Sofortiger Start (< 50 ms) aus lokalem Speicher ohne Warten aufs Netz; users.json-Sync läuft leise im Hintergrund mit hartem 1,5-s-Timeout (inkl. JSON-Body) in App & Service Worker (sw.js v5.1)
+- Android-System-Zurücktaste (popstate): 1× Zurück schließt offene Menüs/Modals oder kehrt aus jedem Tool zurück zum Dashboard; erst 2× Zurück auf dem Dashboard beendet die App
+- Rechner-Speicherung konfigurierbar (Standard AUS): Neuer Schalter in Einstellungen -> „Komfort & Timer“ („Rechner-Eingaben nach Neustart merken“); Service-Notizen bleiben unabhängig davon immer gespeichert
+- Hotline-E-Mail korrigiert: E-Mail-Adresse auf service-hotline@innowatech.de korrigiert
+- Service-Notizen Diktierfunktion: Neuer Button „🎙️ Diktieren“ für deutsche Spracheingabe (bei bestehender Internetverbindung) direkt ins Notizfeld
+- Servicekoffer-Katalog (6 L-Boxen, 162 Artikel): Neue Kachel „🧰 Servicekoffer“ unter „Parameter“ sowie „🧰 Koffer-Teil wählen“ in den Service-Notizen – Koffer-Auswahl per App-Dropdown, offline eingebettete Koffer-Fotos & Pinch-to-Zoom-Lightbox interaktiv in beide Richtungen (Nummer im Foto antippen → springt gelb markiert zum Artikel in der Liste; Artikel bzw. „📍 Fach X“ unten antippen → markiert das Fach gelb oben im Foto)
+
+Neu in v5.0 (Download-/Cache-Fix + finaler Feinschliff)
+-----------------------------------------------------
+- Download & Cache-Schutz (Vorschau): Service Worker wird im Vorschau-iFrame deaktiviert & Alt-Caches werden automatisch bereinigt; "index.html laden" lädt ab sofort direkt als frischer Blob (cache: 'no-store'), damit immer exakt die aktuelle Version auf Platte landet
+- Service-Notizen verschlankt: Neuer Baustein "📋 Einsatzgrund / Auftrag" + einzelner Button "⏱️ Zeitstempel" (Datum & Uhrzeit); die 8 Inhaltsbausteine fügen sauber ohne Zeilen-Zeitstempel ein; doppelter PDF-Berichtskopf unten entfernt
+- E-Mail an INNOWATΞCH senden (service@innowatech.de): Kompakter roter Button direkt unter „PDF drucken“ (ohne Klammer-Mail im Titel), optionales Foto-Anhängen inkl. PC-„Strg+V“-Kopie, sauberer Betreff ohne Weiterleitungs-Text, „Service-Notizen nach Versand automatisch leeren“ standardmäßig aktiv bis manuell abgewählt
+- Dashboard als Standard-Startansicht: Nach Neuinstallation startet die App ab sofort direkt in der Dashboard-Ansicht (statt Schiebeleiste); manuelles Umschalten über den Kopf-Button bleibt weiterhin gespeichert
+- sw.js auf v5.0 angehoben (sauberes Update für GitHub Pages & Keller-Offlinebetrieb)
+
+Neu in v4.9 (Drag-Fix + Feinschliff)
+----------------------------------
+- Einstellungen Sortierung repariert: ☰-Griff (Anwendung / Parameter / Werkzeuge) komplett auf Touch- & Maus-Drag über window-Events umgestellt (ohne pointer-capture-Abbruch) + Auto-Scroll im Einstellungsfenster
+- Enthärter verschlankt: F1:F2-Ratio sowie Aquadron-/Durchflussfelder entfernt; Konzentration rein auf Modell, Rohwasserhärte (°dH), 80-%-Nutzkapazität und enthärtete Wassermenge bis zur Regeneration
+- Service-Notizen für offene Punkte: 7 Praxis-Schnellbausteine (Mitarbeiter inkl. Kürzel, Kunde, Anlagen-SN, Ersatzteil benötigt, Angebot erstellen, Verbrauchsmaterial, Nachorder Servicekoffer) ohne störenden Zeilen-Zeitstempel + separater Button "⏱️ Zeitstempel" (Datum & Uhrzeit); Checkliste entfernt (Platz für künftigen visuellen Servicekoffer-Katalog)
+- PDF-Berichtskopf (optional): Optionale Stammdaten (Kunde/Objekt, Anlage, SN, Auftrag) erscheinen bei Bedarf auf jedem PDF-Ausdruck; lange Service-Notizen werden ungekürzt gedruckt
+- Störmeldung an Hotline (servicehotline@innowatech.de): Vorformatierte E-Mail, Offline-Kopiervorlage sowie optionales Anhängen von Handy-Fotos über System-Teilen (Web Share API)
+
+Neu in v4.8 (Korrekturen v4.7 + Punkte 5–7)
+--------------------------------------------
+- Einstellungen: "Keller-Komfort & Timer" umbenannt in "Komfort & Timer"
+- Einstellungen Sortierung: Hoch-/Runter-Pfeile (↑/↓) entfernt – direktes Halten & Ziehen am Burger-Symbol (☰) per Touch und Maus
+- PID-Regler korrigiert: Messblock-Durchfluss entfernt; stattdessen Rückrechnung des tatsächlichen Hauptleitungs-/Zirkulations-Volumenstroms aus Test-Dosiermenge, Wirkstoffgehalt und Chlor-Anstieg (ΔY) in l/s und m³/h
+- Punkt 5 – Ausliter-Hilfe 2.0: Auswahl Katholyte (Standard), Anolyte oder Beides; Timer-Presets 15 s / 30 s / 60 s; Hochrechnung in l/h (max. 1 Nachkommastelle)
+- Punkt 6 – Schlauchvolumen 2.0: Ausgabe in Litern (l bzw. l/m, 2 Nachkommastellen); optionale Pumpenleistung (l/h) für Vorpump-/Ankunftszeit bis zum Impfpunkt
+- Punkt 7 – Enthärter 2.0: Rohwasserhärte (°dH) + 80-%-Nutzkapazität (Quellharz-Sensor) + optional Aquadron-Anlage / Durchfluss für grobes F1:F2-SPS-Überwachungs-Ratio
+- Kumulatives Changelog eingeführt (alle früheren Versionen bleiben erhalten)
+
+Neu in v4.7 (Punkte 1–4)
+------------------------
+- Auto-Save aller Rechner-Eingaben + Reset-Button in jedem Tab
+- Tab-Pinning (📌 bis zu 5 Tabs) für schnelles Umschalten
+- Wake Lock API (Display wach halten) + Offline-Signalton (Web Audio) beim Auslitern
+- Optik-Profile (Klassik / Keller-Hochkontrast / Dezent) + Techniker-Kürzel im Header ("Service Tool · <KÜRZEL>")
+- sw.js & manifest.json optimiert (100 % offlinefähig im Keller)
+
+Basis v4.6 (Kompaktierung & Stabilisierung)
+-------------------------------------------
+- HTML-Codebasis um über 60 % verschlankt bei vollem Erhalt aller 13 Module, Datenbanken (47 Aquadron-Anlagen, 11 Sonden, 11 Enthärter) und 9 VEGAPULS-Screenshots
+- Vollständige Offline-Auth & Admin-Verwaltung über users.json inkl. Reconnect-Sync

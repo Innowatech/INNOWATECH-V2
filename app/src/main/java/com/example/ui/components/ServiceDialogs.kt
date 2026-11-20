@@ -286,7 +286,7 @@ fun ChangelogDialog(
     AlertDialog(
         onDismissRequest = onDismiss,
         icon = {
-            Icon(Icons.Filled.History, contentDescription = null, tint = InnotechTheme.colors.signalYellow)
+            Icon(Icons.Filled.History, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
         },
         title = { Text("Changelog (v4.6 – v5.6)") },
         text = {
@@ -443,7 +443,7 @@ fun LightboxModal(
                             offsetX = 0f
                             offsetY = 0f
                         }) {
-                            Text("1:1", color = colors.signalYellow)
+                            Text("1:1", color = colors.headerAccent)
                         }
                     }
                     IconButton(
@@ -515,7 +515,7 @@ fun LightboxModal(
                 Surface(
                     shape = RoundedCornerShape(10.dp),
                     color = Color(0xFF1F242D),
-                    border = BorderStroke(1.dp, colors.signalYellow.copy(alpha = 0.5f)),
+                    border = BorderStroke(1.dp, colors.headerAccent.copy(alpha = 0.55f)),
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Text(
@@ -572,7 +572,7 @@ fun InteractiveKofferPhotoBox(
                     .background(if (isActive) colors.signalYellow else Color(0xD9181C22))
                     .border(
                         width = if (isActive) 2.dp else 1.2.dp,
-                        color = if (isActive) Color.White else colors.signalYellow,
+                        color = if (isActive) Color.White else colors.headerAccent,
                         shape = CircleShape
                     )
                     .clickable { onSelectPin(pin.nr) },
