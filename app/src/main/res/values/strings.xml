@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Innotech Tool</string>
+    <string name="brand_title">INNOWATΞCH</string>
+    <string name="brand_subtitle">Service Tool</string>
+    <string name="nav_overview">Übersicht</string>
+    <string name="nav_anwendung">Anwendung</string>
+    <string name="nav_parameter">Parameter</string>
+    <string name="nav_tools_catalog">Tools &amp; Katalog</string>
+    <string name="cd_back">Zurück</string>
+    <string name="cd_toggle_theme">Hell- oder Dunkelmodus umschalten</string>
+    <string name="cd_settings">Einstellungen öffnen</string>
+    <string name="cd_pin_tab">Modul anheften oder lösen</string>
+    <string name="cd_user_profile">Techniker-Anmeldung öffnen</string>
+</resources>

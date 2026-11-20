@@ -1,0 +1,6 @@
+{
+  "name": "Innotech Tool",
+  "description": "INNOWATΞCH Service Tool v5.6 im Design und der Struktur der VEGA Tools App mit allen 17 Modulen, Sonden-/Anlagen-Datenbanken, Servicekoffer-Katalog, Checkliste Enthärtertausch und Notizen.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
