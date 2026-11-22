@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mat-service-tool-v5.6-blue';
+const CACHE_NAME = 'mat-service-tool-v5.6-blue-vega-ui';
 const CORE_URLS = [
   './',
   './index.html',
@@ -25,10 +25,8 @@ function fetchWithHardTimeout(request, ms = 1500, fetchOpts = {}) {
 }
 
 self.addEventListener('install', event => {
-  if (IS_PREVIEW) {
-    self.skipWaiting();
-    return;
-  }
+  self.skipWaiting();
+  if (IS_PREVIEW) return;
   event.waitUntil((async () => {
     const cache = await caches.open(CACHE_NAME);
     await cache.addAll(CORE_URLS);
@@ -41,7 +39,6 @@ self.addEventListener('install', event => {
       } catch {}
     }));
   })());
-  // Kein automatisches skipWaiting(): Der neue SW wartet, bis autoUpdate-Nutzer auf "Jetzt aktualisieren" klicken.
 });
 
 self.addEventListener('message', event => {
@@ -103,15 +100,22 @@ self.addEventListener('fetch', event => {
   if (url.origin !== self.location.origin) return;
   if (url.searchParams.has('cb')) return;
 
-  // Navigation (App-Start): Sofort & ohne jede Netzwerk-Wartezeit aus dem Cache bedienen
+  // Navigation (App-Start): Kurz (1,5s) frisch vom Netz laden, bei Funkloch/Offline sofort aus Cache bedienen
   if (event.request.mode === 'navigate') {
     event.respondWith((async () => {
       const cache = await caches.open(CACHE_NAME);
+      try {
+        const netRes = await fetchWithHardTimeout(event.request, 1500, { cache: 'no-cache' });
+        if (netRes && netRes.ok && !netRes.redirected) {
+          cache.put('./index.html', netRes.clone()).catch(() => {});
+          return netRes;
+        }
+      } catch {}
       const hit = (await cache.match(event.request, { ignoreSearch: true }))
         || (await cache.match('./index.html'))
         || (await cache.match('./'));
       if (hit) return toNonRedirectedResponse(hit);
-      return fetchWithHardTimeout(event.request, 4000);
+      return fetch(event.request);
     })());
     return;
   }
